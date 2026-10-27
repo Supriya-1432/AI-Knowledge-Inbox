@@ -1,0 +1,35 @@
+# Understanding Retrieval-Augmented Generation (RAG)
+
+Retrieval-Augmented Generation (RAG) is an artificial intelligence technique that combines information retrieval with large language models (LLMs) to generate accurate, context-aware answers. Instead of relying only on the knowledge learned during training, a RAG system retrieves relevant information from an external knowledge source, such as documents, text files, or a database, and provides that information to the language model as context. This helps the model answer questions based on specific information that may not be included in its original training data.
+
+A typical RAG pipeline consists of five major steps: document ingestion, chunking, embedding generation, retrieval, and answer generation. During document ingestion, the system loads data from sources such as PDFs, text files, or databases. The documents are divided into smaller sections called chunks so that relevant information can be retrieved efficiently. An embedding model converts each chunk into a numerical vector that represents its semantic meaning. These vectors are stored in a vector database or another searchable index.
+
+When a user asks a question, the system converts the question into an embedding and searches for chunks that are semantically similar to the question. The most relevant chunks are retrieved and passed to the large language model along with the original question. The model then generates an answer grounded in the retrieved context. For example, if a user asks, "What are the main steps in a RAG pipeline?", the system can retrieve the relevant paragraph and generate an answer listing document ingestion, chunking, embedding generation, retrieval, and answer generation.
+
+RAG offers several advantages over using a language model alone. It can provide answers based on private or frequently updated information without requiring the model to be retrained every time the source data changes. It can also improve factual accuracy, make responses easier to verify, and reduce hallucinations when the retrieved context is relevant and reliable. However, RAG is not guaranteed to eliminate hallucinations. If the retrieval system returns irrelevant information, the source documents are incomplete, or the model misinterprets the context, the generated answer may still be incorrect.
+
+RAG is different from fine-tuning. Fine-tuning modifies a model's learned parameters through additional training, usually to improve its behavior, style, or performance on particular tasks. RAG supplies relevant external information at inference time without necessarily changing the model's parameters. The two approaches can also be combined when an application needs both specialized model behavior and access to external knowledge.
+
+RAG systems commonly use embedding models, vector databases, and large language models. Popular tools include sentence-transformer embedding models, FAISS and Chroma for vector search, LangChain and LlamaIndex for building retrieval pipelines, and language models such as Llama or Qwen for answer generation. Some systems use keyword search or hybrid search, which combines keyword matching with semantic similarity. Retrieval quality can be improved using metadata filters, reranking models, appropriate chunk sizes, and evaluation of retrieved results.
+
+RAG is useful in many real-world applications, including customer support chatbots, enterprise knowledge assistants, document question-answering systems, technical documentation search, legal document analysis, and internal company assistants. For example, a company can build a RAG assistant over its internal policies so employees can ask questions about leave policies, reimbursement procedures, or security guidelines. The assistant retrieves relevant policy sections and uses them to formulate an answer rather than relying entirely on the language model's general knowledge.
+
+In summary, Retrieval-Augmented Generation connects a language model with an external information retrieval system. Its effectiveness depends on the quality of the source documents, chunking strategy, embeddings, retrieval method, and generated response. A well-designed RAG system can make AI applications more useful, especially when answers must be based on specific, private, or frequently changing information.
+
+
+
+What is RAG?
+What are the five major steps in a RAG pipeline?
+What is the purpose of chunking?
+Why can a RAG system still hallucinate?
+What are the limitations of RAG?
+
+
+
+https://www.hostinger.com/in/tutorials/how-to-start-an-online-store/
+
+What is an online store, and what are the main steps to start one?
+What are the seven steps involved in starting an online store?
+How can Google Trends help someone decide what products to sell?
+What features should you look for when choosing an ecommerce platform?
+Why should an online store include terms and conditions and a privacy policy?
